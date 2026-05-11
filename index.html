@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Dialogue Supporter - AIとの会話を整理するChrome拡張</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+      background: #0f0f1e;
+      color: #e0e0e0;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 28px;
+      color: #c4b5fd;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .tagline {
+      text-align: center;
+      color: #888;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 20px;
+      color: #c4b5fd;
+      margin: 32px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #2a2a4a;
+    }
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 16px 0;
+    }
+    .feature {
+      background: #16162a;
+      border-radius: 8px;
+      padding: 16px;
+      border-left: 3px solid #7c3aed;
+    }
+    .feature h3 {
+      font-size: 15px;
+      color: #e0e0e0;
+      margin-bottom: 4px;
+    }
+    .feature p {
+      font-size: 14px;
+      color: #999;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+    .badge-free { background: #333; color: #aaa; }
+    .badge-pro { background: #7c3aed; color: white; }
+    .pricing {
+      background: #16162a;
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      margin: 24px 0;
+    }
+    .price {
+      font-size: 36px;
+      font-weight: 700;
+      color: #c4b5fd;
+    }
+    .price-note {
+      font-size: 14px;
+      color: #888;
+      margin-top: 4px;
+    }
+    .note {
+      font-size: 13px;
+      color: #666;
+      margin: 16px 0;
+      padding: 12px;
+      background: #12121f;
+      border-radius: 6px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 8px 0;
+    }
+    li {
+      font-size: 14px;
+      color: #ccc;
+      margin: 4px 0;
+    }
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #2a2a4a;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Dialogue Supporter</h1>
+    <p class="tagline">AIとの長い会話を整理するChrome拡張機能</p>
+
+    <h2>こんな経験ありませんか？</h2>
+    <ul>
+      <li>AIと壁打ちしてたら、何の話をしていたかわからなくなった</li>
+      <li>話題が散らかって、結局何が決まったんだっけ？</li>
+      <li>最初の目的からいつの間にか脱線していた</li>
+    </ul>
+
+    <h2>機能一覧</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>トピック分析 <span class="badge badge-free">FREE</span></h3>
+        <p>会話を話題ごとに分割・整理。決まったこと・まだ決まっていないことを可視化します。</p>
+      </div>
+      <div class="feature">
+        <h3>意味検索 <span class="badge badge-free">FREE</span></h3>
+        <p>会話中にわからない言葉があれば、右クリックからその場で意味を調べられます。</p>
+      </div>
+      <div class="feature">
+        <h3>ゴール達成チェック <span class="badge badge-pro">PRO</span></h3>
+        <p>最初の目的に対してどこまで進んだか、達成済み・未達成を評価します。</p>
+      </div>
+      <div class="feature">
+        <h3>脱線分析 <span class="badge badge-pro">PRO</span></h3>
+        <p>会話がどこで本筋から逸れたかを検出。本筋に戻すプロンプトも生成します。</p>
+      </div>
+      <div class="feature">
+        <h3>右クリックメニュー連携 <span class="badge badge-free">FREE</span></h3>
+        <p>テキスト選択→右クリックで意味検索・会話分析に直接送信できます。</p>
+      </div>
+    </div>
+
+    <h2>料金</h2>
+    <div class="pricing">
+      <div class="price">&#165;290</div>
+      <div class="price-note">買い切り（Pro版）</div>
+    </div>
+    <ul>
+      <li>無料版：トピック分析・意味検索が利用可能（1日10回まで）</li>
+      <li>Pro版：全機能が無制限で利用可能</li>
+      <li>API費用はユーザー負担です（Gemini API無料枠で利用可能）</li>
+    </ul>
+
+    <div class="note">
+      本拡張機能はGemini APIを使用します。ユーザー自身のAPIキーを設定してご利用ください。
+      会話データは端末内でのみ処理され、Gemini APIへの送信以外に外部サーバーへの送信は行いません。
+    </div>
+
+    <footer>
+      &copy; 2026 AI Dialogue Supporter
+    </footer>
+  </div>
+</body>
+</html>
