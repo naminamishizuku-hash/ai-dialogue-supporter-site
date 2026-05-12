@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー - AI Dialogue Supporter</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+      background: #0f0f1e;
+      color: #e0e0e0;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 24px;
+      color: #c4b5fd;
+      margin-bottom: 8px;
+    }
+    .updated {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-size: 18px;
+      color: #c4b5fd;
+      margin: 28px 0 8px;
+    }
+    p, li {
+      font-size: 14px;
+      color: #ccc;
+      margin: 8px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #60a5fa;
+    }
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid #2a2a4a;
+      font-size: 12px;
+      color: #555;
+    }
+    footer a { color: #7c3aed; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">最終更新日: 2026年5月12日</p>
+
+    <p>AI Dialogue Supporter（以下「本拡張機能」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本ポリシーでは、本拡張機能が取り扱うデータについて説明します。</p>
+
+    <h2>1. 収集するデータ</h2>
+    <p>本拡張機能は以下のデータをユーザーの端末内（chrome.storage.local）に保存します。</p>
+    <ul>
+      <li><strong>Gemini APIキー</strong>: ユーザーが入力したAPIキー（API呼び出しに使用）</li>
+      <li><strong>モデル設定</strong>: ユーザーが選択したAIモデルの設定</li>
+      <li><strong>ゴール設定</strong>: ユーザーが入力したゴール文</li>
+      <li><strong>分析回数カウント</strong>: 無料版の日次利用回数</li>
+    </ul>
+
+    <h2>2. データの送信先</h2>
+    <ul>
+      <li><strong>Google Gemini API</strong>: ユーザーが貼り付けた会話テキストを分析のために送信します。送信はユーザーが「分析」ボタンを押した時のみ行われます。</li>
+      <li><strong>ExtensionPay</strong>: Pro版の購入状態を確認するために通信します。決済情報はStripeが処理し、本拡張機能はカード情報等を一切取り扱いません。</li>
+    </ul>
+
+    <h2>3. 送信しないデータ</h2>
+    <ul>
+      <li>会話テキストを開発者のサーバーに送信することはありません</li>
+      <li>ユーザーの閲覧履歴、個人情報を収集することはありません</li>
+      <li>トラッキングや広告目的のデータ収集は行いません</li>
+    </ul>
+
+    <h2>4. データの保存</h2>
+    <p>すべてのデータはユーザーの端末内（chrome.storage.local）にのみ保存されます。拡張機能をアンインストールすると、保存されたデータはすべて削除されます。</p>
+
+    <h2>5. 第三者への提供</h2>
+    <p>本拡張機能は、Gemini APIへの分析リクエストおよびExtensionPayへの課金状態確認を除き、ユーザーのデータを第三者に提供することはありません。</p>
+
+    <h2>6. お問い合わせ</h2>
+    <p>本ポリシーに関するご質問は、以下までお問い合わせください。</p>
+    <p>メール: ai.dialogue.supporter@gmail.com</p>
+
+    <h2>7. ポリシーの変更</h2>
+    <p>本ポリシーは予告なく変更される場合があります。変更があった場合は、本ページにて更新します。</p>
+
+    <footer>
+      <a href="index.html">AI Dialogue Supporter トップページ</a>
+    </footer>
+  </div>
+</body>
+</html>
